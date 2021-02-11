@@ -26,3 +26,16 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```
+```{r}
+```
+```{r}
+donald <- x %>%
+  filter(candidate == "Donald Trump") %>%
+  mutate(percent = candidatevotes/totalvotes) %>%
+  arrange(desc(percent)) %>%
+  slice(1:6) %>%
+  select(state, county, percent, totalvotes)
+
+```
+
